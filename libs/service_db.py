@@ -62,7 +62,6 @@ class ServiceDB:
         if order_by:
             query += ' ORDER BY ' + ', '.join(f'{(item[1:] + " DESC") if item.startswith("-") else (item + " ASC")}' for item in order_by)
         query += ';'
-        print(query)
         self.__cursor.execute(query)
         result = self.__cursor.fetchall()
 
