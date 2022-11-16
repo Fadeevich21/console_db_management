@@ -24,7 +24,7 @@ class Menu:
         self.__menu.append(query)
 
     def __choose_menu(self) -> int:
-        text = f'Выберите пунк меню:\n'
+        text = f'Выберите пункт меню:\n'
         for number, name in self.__query.items():
             text += f'{number}. {name}\n'
         text += '_> '
